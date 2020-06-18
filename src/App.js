@@ -1,11 +1,15 @@
 import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import NotFound from './components/common/notFound';
 
 function App() {
     return (
-        <div
-            className="App  align-items-center justify-content-center row
-            "
-        ></div>
+        <React.Fragment>
+            <Switch>
+                <Route path="/notFound" component={NotFound} />
+                <Redirect to="/notFound" />
+            </Switch>
+        </React.Fragment>
     );
 }
 
