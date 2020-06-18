@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+.bgapp {
+    min-height: 100vh;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background-image: url('../resource/img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.content {
+    min-height: 100vh;
+    min-width: 100%;
+
+    background-size: cover;
+    background-color: rgba(10, 10, 10, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ops {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem;
+}
