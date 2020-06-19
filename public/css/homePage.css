@@ -1,0 +1,12 @@
+.home {
+    min-height: 100vh;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../resource/img/back.png');
+    background-repeat: repeat;
+}
