@@ -10,7 +10,7 @@ function NotFound() {
             <div className="content">
                 <div className="ops text-center">
                     <h3>Opps!</h3>
-                    <p className="lead">
+                    <p className="lead ">
                         با عرض پوزش صفحه مورد نظر شما یافت نشد{' '}
                     </p>
                 </div>
