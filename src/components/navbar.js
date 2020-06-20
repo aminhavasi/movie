@@ -5,12 +5,13 @@ const Navbar = () => {
         <div>
             <nav className="navbar navbar-expand-md bg-primary navbar-dark fixed-top">
                 <img
-                    className="img-fluid d-none d-lg-block"
-                    style={{ width: '60px' }}
-                    src={require('./../resource/img/svg.png')}
+                    className="img-fluid d-none d-lg-block mr-1"
+                    style={{ width: '80px' }}
+                    alt="logo"
+                    src={require('./../resource/img/p.png')}
                 />
                 <p className="navbar-brand " href="#">
-                    Amin havasi
+                    AminMovie.com
                 </p>
                 <button
                     type="button"
@@ -20,11 +21,28 @@ const Navbar = () => {
                 >
                     <span className="navbar-toggler-icon" />
                 </button>
-                <div className="collapse navbar-collapse" id="navabrNav">
-                    <ul className="navbar-nav">
+
+                <div className="collapse navbar-collapse " id="navabrNav">
+                    <ul className="navbar-nav mr-4 ml-auto  ">
+                        <div className="search-container d-none d-lg-block ml-auto">
+                            <form className="form-inline ">
+                                <input
+                                    className="form-control mr-sm-2 "
+                                    type="text"
+                                    placeholder="Search"
+                                />
+                                <button
+                                    className="btn text-white"
+                                    style={{ backgroundColor: '#281478' }}
+                                    type="submit"
+                                >
+                                    Search
+                                </button>
+                            </form>
+                        </div>
                         <li className="nav-item">
                             <Link to="#section-top" className="nav-link">
-                                Top page
+                                Movie
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -32,17 +50,12 @@ const Navbar = () => {
                                 to="#section-description"
                                 className="nav-link"
                             >
-                                Description
+                                Theaters
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link to="#section-skills" className="nav-link">
-                                Skills
-                            </Link>
-                        </li>{' '}
-                        <li className="nav-item">
-                            <Link to="#section-posts" className="nav-link">
-                                posts
+                                News
                             </Link>
                         </li>{' '}
                     </ul>
