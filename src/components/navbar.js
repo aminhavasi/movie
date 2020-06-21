@@ -58,6 +58,15 @@ const Navbar = () => {
                                 News
                             </Link>
                         </li>{' '}
+                        <li className="nav-item">
+                            <Link to="#section-skills" className="nav-link">
+                                <i
+                                    className="fa fa-user"
+                                    data-toggle="tooltip"
+                                    title="SignUp or SignIn"
+                                />
+                            </Link>
+                        </li>{' '}
                     </ul>
                 </div>
             </nav>
