@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const NowPlay = () => {
     return (
         <React.Fragment>
-            <div className="row ">
+            <div className="row mt-3 ">
                 <div className="mx-auto d-flex flex flex-column img-fluid col-3 border rounded-sm">
                     <Link>
                         <img
