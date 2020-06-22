@@ -4,7 +4,12 @@
 }
 
 @media screen and (min-width: 601px) {
-    .nowplay p {
+    .img:hover {
+        animation-name: toUp;
+        position: relative;
+        animation-fill-mode: forwards;
+
+        animation-duration: 0.5s;
     }
 }
 
@@ -12,6 +17,24 @@
     .nowplay p {
         font-size: 10px;
     }
-    .nowplay i {
+}
+
+@keyframes toUp {
+    from {
+        top: 0px;
     }
+    to {
+        top: -10px;
+    }
+}
+.link {
+    color: black;
+}
+.link:hover {
+    color: blue;
+    text-decoration: none;
+}
+.filmName {
+    font-size: 15px !important;
+    word-break: break-all;
 }
