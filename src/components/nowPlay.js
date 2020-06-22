@@ -2,28 +2,28 @@ import React from 'react';
 const NowPlay = () => {
     return (
         <React.Fragment>
-            <div className="row amin ">
+            <div className="row ">
                 <div className="mx-auto img-fluid col-3">
                     <img
                         alt="img"
                         className="img"
                         src={require('./../resource/img/test.jpg')}
                     />
-                    <div className="row">
+                    <div className="row nowplay">
                         <div className="felx d-flex px-2 pt-3">
                             <i
                                 className="fa fa-star"
-                                style={{ color: 'yellow', fontSize: '1.5vw' }}
+                                style={{ color: 'yellow' }}
                             />
-                            <p style={{ fontSize: '1.2vw' }}>%76</p>
+                            <p>%76</p>
                         </div>
-                        <div className="felx d-flex px-2 pt-3 nowplay">
+                        <div className="felx d-flex px-2 pt-3 ">
                             <i
                                 className="fa fa-film"
-                                style={{ color: 'green', fontSize: '1.5vw' }}
+                                style={{ color: 'green' }}
                                 aria-hidden="true"
                             ></i>
-                            <p style={{ fontSize: '1.2vw' }}>%32</p>
+                            <p>%32</p>
                         </div>
                     </div>
                 </div>
