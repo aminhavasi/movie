@@ -10,8 +10,3 @@
     background-image: url('../resource/img/back.png');
     background-repeat: repeat;
 }
-
-.img {
-    background-size: cover;
-    width: 100%;
-}
