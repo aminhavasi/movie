@@ -4,15 +4,14 @@
 }
 
 @media screen and (min-width: 601px) {
-    .amin i,
-    p {
-        font-size: 25px;
+    .nowplay p {
     }
 }
 
 @media screen and (max-width: 600px) {
-    .amin i,
-    p {
-        font-size: 12px;
+    .nowplay p {
+        font-size: 10px;
+    }
+    .nowplay i {
     }
 }
