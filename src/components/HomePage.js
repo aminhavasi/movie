@@ -4,6 +4,7 @@ import NowPlay from './nowPlay';
 import WeekMovie from './thisWeekMovies';
 import ComingSoon from './comingSoon';
 import Footer from './common/footer';
+import Carousel from './carousel';
 const HomePage = () => {
     return (
         <div>
@@ -19,7 +20,9 @@ const HomePage = () => {
                     <h5>COMIN SOON...</h5>
                     <ComingSoon />
                     <hr />
+                    <Carousel />
                 </div>
+
                 <Footer />
             </main>
         </div>
