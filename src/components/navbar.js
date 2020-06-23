@@ -59,7 +59,7 @@ const Navbar = () => {
                             </Link>
                         </li>{' '}
                         <li className="nav-item">
-                            <Link to="#section-skills" className="nav-link">
+                            <Link to="/register" className="nav-link">
                                 <i
                                     className="fa fa-user"
                                     data-toggle="tooltip"

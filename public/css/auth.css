@@ -1,0 +1,13 @@
+.register {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1e0e0;
+}
+
+@media screen and (max-width: 600px) {
+    .register button[type='submit'] {
+        width: 100%;
+    }
+}
