@@ -62,9 +62,10 @@ const Navbar = () => {
                             <Link to="/register" className="nav-link">
                                 <i
                                     className="fa fa-user"
-                                    data-toggle="tooltip"
-                                    title="SignUp or SignIn"
+                                    // data-toggle="tooltip"
+                                    // title="SignUp or SignIn"
                                 />
+                                Login/Register
                             </Link>
                         </li>{' '}
                     </ul>
