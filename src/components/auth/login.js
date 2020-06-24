@@ -1,8 +1,20 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+    setEmail,
+    setPassword,
+    sendLoginForm,
+} from './../../redux/actions/loginAction';
 const Login = () => {
+    const dispatch = useDispatch();
+    const email = useSelector((state) => state.emailLogin);
+    const password = useSelector((state) => state.passwordLogin);
+    const handle = () => {
+        dispatch(sendLoginForm());
+    };
     return (
         <div className="login">
-            <form className="shadow-lg">
+            <form className="shadow-lg" onSubmit={(e) => e.preventDefault()}>
                 <div className="card ">
                     <div className="card card-header text-center">
                         <h5>Login Form</h5>
@@ -16,6 +28,8 @@ const Login = () => {
                                 id="email"
                                 placeholder="Example@info.com"
                                 name="email"
+                                value={email}
+                                onChange={(e) => dispatch(setEmail(e))}
                             />
                         </div>
                         <div className="form-group">
@@ -26,6 +40,8 @@ const Login = () => {
                                 id="password"
                                 placeholder="******"
                                 name="password"
+                                value={password}
+                                onChange={(e) => dispatch(setPassword(e))}
                             />
                         </div>
                         <div className="form-group">
@@ -46,7 +62,10 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
-                    <button className="card card-footer bg-success text-center text-white">
+                    <button
+                        onClick={() => handle()}
+                        className="card card-footer bg-primary text-center text-white"
+                    >
                         Login
                     </button>
                 </div>
