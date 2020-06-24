@@ -3,6 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import NotFound from './components/common/notFound';
 import HomePage from './components/HomePage';
 import Register from './components/auth/register';
+import Dashboard from './components/admin/dashboard';
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path="/register" component={Register} />
+                <Route path="/admin" component={Dashboard} />
                 <Route path="/notFound" component={NotFound} />
                 <Redirect to="/notFound" />
             </Switch>
