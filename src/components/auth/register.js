@@ -1,5 +1,16 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+    setUsername,
+    setEmail,
+    setPassword,
+    sendRegisterForm,
+} from './../../redux/actions/registerAction';
 const Register = () => {
+    const dispatch = useDispatch();
+    const email = useSelector((state) => state.emailRegister);
+    const username = useSelector((state) => state.usernameRegister);
+    const password = useSelector((state) => state.passwordRegister);
     return (
         <React.Fragment>
             <div
@@ -22,6 +33,8 @@ const Register = () => {
                                 className="form-control"
                                 id="username"
                                 placeholder="Enter username"
+                                value={username}
+                                onChange={(e) => dispatch(setUsername(e))}
                             />
                         </div>
                         <div className="form-group">
@@ -32,6 +45,8 @@ const Register = () => {
                                 id="email"
                                 placeholder="Example@info.com"
                                 name="email"
+                                value={email}
+                                onChange={(e) => dispatch(setEmail(e))}
                             />
                         </div>
                         <div className="form-group">
@@ -42,6 +57,8 @@ const Register = () => {
                                 id="password"
                                 placeholder="********"
                                 name="password"
+                                value={password}
+                                onChange={(e) => dispatch(setPassword(e))}
                             />
                         </div>
 
