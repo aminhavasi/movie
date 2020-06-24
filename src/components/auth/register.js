@@ -11,6 +11,9 @@ const Register = () => {
     const email = useSelector((state) => state.emailRegister);
     const username = useSelector((state) => state.usernameRegister);
     const password = useSelector((state) => state.passwordRegister);
+    const handle = async () => {
+        dispatch(sendRegisterForm());
+    };
     return (
         <React.Fragment>
             <div
@@ -66,6 +69,7 @@ const Register = () => {
                             <button
                                 type="submit"
                                 className="btn btn-secondary "
+                                onClick={() => handle()}
                             >
                                 Submit
                             </button>
