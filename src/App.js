@@ -11,9 +11,35 @@ function App() {
         <React.Fragment>
             <Switch>
                 <Route exact path="/" component={HomePage} />
-                <Route path="/register" component={Register} />
-                <Route path="/login" component={Login} />
-                <Route path="/admin" component={Dashboard} />
+                <Route
+                    path="/register"
+                    render={() => {
+                        if (localStorage.getItem('token')) {
+                            return <Redirect to="/" />;
+                        } else {
+                            return <Register />;
+                        }
+                    }}
+                />
+                <Route
+                    path="/login"
+                    render={() => {
+                        if (localStorage.getItem('token')) {
+                            return <Redirect to="/" />;
+                        } else {
+                            return <Login />;
+                        }
+                    }}
+                />
+                <Route
+                    path="/admin"
+                    render={() => {
+                        if (localStorage.getItem('token')) {
+                            return <Dashboard />;
+                        } else return <Redirect to="/" />;
+                    }}
+                />
+
                 <Route path="/notFound" component={NotFound} />
                 <Redirect to="/notFound" />
             </Switch>

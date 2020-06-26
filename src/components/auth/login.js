@@ -22,7 +22,7 @@ const Login = (props) => {
                 localStorage.setItem('token', data);
                 await dispatch(sendLoginForm());
 
-                await props.history.replace('/admin');
+                window.location = '/';
             }
         } catch (error) {
             if (error.response && error.response.status === 400) {
