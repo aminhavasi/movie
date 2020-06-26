@@ -18,10 +18,11 @@ const Login = (props) => {
             const status = await checkLogin(email, password);
             if (status) {
                 const { data } = await login(email, password);
+                console.log(data);
                 localStorage.setItem('token', data);
                 await dispatch(sendLoginForm());
 
-                await props.history.replace('/');
+                await props.history.replace('/admin');
             }
         } catch (error) {
             if (error.response && error.response.status === 400) {
