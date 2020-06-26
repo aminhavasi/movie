@@ -8,6 +8,7 @@ import {
 } from './../../redux/actions/registerAction';
 import { ToastContainer, toast } from 'react-toastify';
 import { register } from './../services/httpRegister';
+import { checkRegister } from './../../utils/checkRegister';
 import 'react-toastify/dist/ReactToastify.css';
 const Register = () => {
     const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const Register = () => {
     const password = useSelector((state) => state.passwordRegister);
     const handle = async () => {
         try {
-            const status = await cheack(password);
+            const status = await checkRegister(username, email, password);
             if (status) {
                 const { data } = await register(username, email, password);
                 await console.log('ok', data);
