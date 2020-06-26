@@ -1,0 +1,3 @@
+{
+    "api_register": "http://localhost:3500/auth/register"
+}
