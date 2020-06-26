@@ -1,3 +1,4 @@
 {
-    "api_register": "http://localhost:3500/auth/register"
+    "api_register": "http://localhost:3500/auth/register",
+    "api_login": "http://localhost:3500/auth/login"
 }

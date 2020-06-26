@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     setUsername,
@@ -10,7 +11,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { register } from './../services/httpRegister';
 import { checkRegister } from './../../utils/checkRegister';
 import 'react-toastify/dist/ReactToastify.css';
-const Register = () => {
+const Register = (props) => {
     const dispatch = useDispatch();
     const email = useSelector((state) => state.emailRegister);
     const username = useSelector((state) => state.usernameRegister);
@@ -22,6 +23,7 @@ const Register = () => {
                 const { data } = await register(username, email, password);
                 await console.log('ok', data);
                 await dispatch(sendRegisterForm());
+                await props.history.replace('/login');
             }
         } catch (error) {
             if (error.response && error.response.status === 400) {
@@ -93,6 +95,9 @@ const Register = () => {
                         </div>
                     </form>
                 </div>
+                <Link to="/login" className="mt-2 loginLink">
+                    Do you have an account?
+                </Link>
             </div>
         </React.Fragment>
     );

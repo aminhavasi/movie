@@ -5,6 +5,7 @@ import {
     setPassword,
     sendLoginForm,
 } from './../../redux/actions/loginAction';
+import { Link } from 'react-router-dom';
 const Login = () => {
     const dispatch = useDispatch();
     const email = useSelector((state) => state.emailLogin);
@@ -70,6 +71,11 @@ const Login = () => {
                     </button>
                 </div>
             </form>
+            <div>
+                <Link to="/register" className="loginLink">
+                    <p>Dont have an account?</p>
+                </Link>
+            </div>
         </div>
     );
 };

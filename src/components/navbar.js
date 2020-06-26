@@ -59,7 +59,7 @@ const Navbar = () => {
                             </Link>
                         </li>{' '}
                         <li className="nav-item">
-                            <a href="/register" className="nav-link">
+                            <a href="/login" className="nav-link">
                                 <i
                                     className="fa fa-user"
                                     data-toggle="tooltip"
