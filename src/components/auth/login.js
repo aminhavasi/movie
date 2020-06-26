@@ -1,22 +1,37 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast, ToastContainer } from 'react-toastify';
 import {
     setEmail,
     setPassword,
     sendLoginForm,
 } from './../../redux/actions/loginAction';
 import { Link } from 'react-router-dom';
-const Login = () => {
+import { login } from '../services/httpLogin';
+import { checkLogin } from './../../utils/checkLogin';
+const Login = (props) => {
     const dispatch = useDispatch();
     const email = useSelector((state) => state.emailLogin);
     const password = useSelector((state) => state.passwordLogin);
-    const handle = () => {
+    const handle = async () => {
         try {
-        } catch (error) {}
-        // dispatch(sendLoginForm());
+            const status = await checkLogin(email, password);
+            if (status) {
+                const { data } = await login(email, password);
+                localStorage.setItem('token', data);
+                await dispatch(sendLoginForm());
+
+                await props.history.replace('/');
+            }
+        } catch (error) {
+            if (error.response && error.response.status === 400) {
+                toast.error('email or password is wrong');
+            }
+        }
     };
     return (
         <div className="login">
+            <ToastContainer />
             <form className="shadow-lg" onSubmit={(e) => e.preventDefault()}>
                 <div className="card ">
                     <div className="card card-header text-center">

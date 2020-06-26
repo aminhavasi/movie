@@ -20,8 +20,7 @@ const Register = (props) => {
         try {
             const status = await checkRegister(username, email, password);
             if (status) {
-                const { data } = await register(username, email, password);
-                await console.log('ok', data);
+                await register(username, email, password);
                 await dispatch(sendRegisterForm());
                 await props.history.replace('/login');
             }
