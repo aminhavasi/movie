@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Avai
@@ -46,3 +47,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+The first version of the cinema site with features such as buying and reserving cinema tickets and seats and has 3 user levels and ...
+React+Redux+RestFull(in v2.0 with GraphQl in future)and ...
+>>>>>>> 2521912eff36489d5db0fe73b12fac0a9bba0a9e
