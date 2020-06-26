@@ -11,7 +11,9 @@ const Login = () => {
     const email = useSelector((state) => state.emailLogin);
     const password = useSelector((state) => state.passwordLogin);
     const handle = () => {
-        dispatch(sendLoginForm());
+        try {
+        } catch (error) {}
+        // dispatch(sendLoginForm());
     };
     return (
         <div className="login">
