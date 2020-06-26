@@ -6,16 +6,32 @@ import {
     setPassword,
     sendRegisterForm,
 } from './../../redux/actions/registerAction';
+import { ToastContainer, toast } from 'react-toastify';
+import { register } from './../services/httpRegister';
+import 'react-toastify/dist/ReactToastify.css';
 const Register = () => {
     const dispatch = useDispatch();
     const email = useSelector((state) => state.emailRegister);
     const username = useSelector((state) => state.usernameRegister);
     const password = useSelector((state) => state.passwordRegister);
     const handle = async () => {
-        dispatch(sendRegisterForm());
+        try {
+            const status = await cheack(password);
+            if (status) {
+                const { data } = await register(username, email, password);
+                await console.log('ok', data);
+                await dispatch(sendRegisterForm());
+            }
+        } catch (error) {
+            if (error.response && error.response.status === 400) {
+                toast.error('some filds is not correct');
+            }
+        }
     };
+
     return (
         <React.Fragment>
+            <ToastContainer />
             <div
                 className="register"
                 style={{
