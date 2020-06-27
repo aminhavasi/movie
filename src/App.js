@@ -25,7 +25,11 @@ function App() {
                     path="/login"
                     render={() => {
                         if (localStorage.getItem('token')) {
-                            return <Redirect to="/" />;
+                            if (localStorage.getItem('access') === 'admin') {
+                                return <Redirect to="/admin" />;
+                            } else {
+                                return <Redirect to="/" />;
+                            }
                         } else {
                             return <Login />;
                         }

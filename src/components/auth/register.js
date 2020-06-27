@@ -22,7 +22,7 @@ const Register = (props) => {
             if (status) {
                 await register(username, email, password);
                 await dispatch(sendRegisterForm());
-                await props.history.replace('/login');
+                window.location = '/login';
             }
         } catch (error) {
             if (error.response && error.response.status === 400) {

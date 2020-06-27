@@ -17,12 +17,17 @@ const Login = (props) => {
         try {
             const status = await checkLogin(email, password);
             if (status) {
-                const { data } = await login(email, password);
-                console.log(data);
-                localStorage.setItem('token', data);
+                const { headers } = await login(email, password);
+                localStorage.setItem('token', headers['x-auth']);
+                localStorage.setItem('access', headers['x-access']);
+
                 await dispatch(sendLoginForm());
 
-                window.location = '/';
+                if (headers['x-auth'] && headers['x-access'] === 'admin') {
+                    window.location = '/admin';
+                } else {
+                    window.location = '/';
+                }
             }
         } catch (error) {
             if (error.response && error.response.status === 400) {

@@ -59,14 +59,25 @@ const Navbar = () => {
                             </Link>
                         </li>{' '}
                         <li className="nav-item">
-                            <a href="/login" className="nav-link">
-                                <i
-                                    className="fa fa-user"
-                                    data-toggle="tooltip"
-                                    data-placement="top"
-                                    title="Login or Register!"
-                                />
-                            </a>
+                            {!localStorage.getItem('token') ? (
+                                <a href="/login" className="nav-link">
+                                    <i
+                                        className="fa fa-user "
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                        title="Login or Register!"
+                                    />
+                                </a>
+                            ) : (
+                                <a href="/logout" className="nav-link lead">
+                                    <i
+                                        className="fa fa-sign-out "
+                                        data-toggle="tooltip"
+                                        data-placement="top"
+                                        title="log Out!"
+                                    />
+                                </a>
+                            )}
                         </li>{' '}
                     </ul>
                 </div>
