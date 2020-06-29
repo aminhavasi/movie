@@ -38,7 +38,7 @@ function App() {
                 <Route
                     path="/admin"
                     render={() => {
-                        if (localStorage.getItem('token')) {
+                        if (!localStorage.getItem('token')) {
                             return <Dashboard />;
                         } else return <Redirect to="/" />;
                     }}
