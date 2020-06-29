@@ -8,5 +8,8 @@ export function checkLogin(email, password) {
         return false;
     } else {
         return true;
-    }
+    } 
+
+
+    //-----------
 }
