@@ -3,31 +3,31 @@ const navLink = [
         id: 1,
         text: 'Manage Admins ',
         icon: 'fa fa-user ',
-        link: '/admin/create-post',
+        link: '/admin/manage-admins',
     },
     {
         id: 2,
         text: 'Movie list',
         icon: 'fa fa-list ',
-        link: '/admin/allposts',
+        link: '/admin/allmovie',
     },
     {
         id: 3,
         text: 'Create Movie ',
         icon: 'fa fa-plus',
-        link: '/admin/allposts',
+        link: '/admin/create-movie',
     },
     {
         id: 4,
         text: 'edit or Delete Movie ',
         icon: 'fa fa-cog ',
-        link: '/admin/allposts',
+        link: '/admin/modifie',
     },
     {
         id: 5,
         text: 'emails',
         icon: 'fa fa-envelope',
-        link: '/admin/allposts',
+        link: '/admin/emails',
     },
 ];
 const getAdminNavLink = () => {

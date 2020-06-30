@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import NavbarAdmin from './navbarAdmin';
 import Sidebar from './sidebar';
 import MainAdmin from './admin';
+import ManageAdmins from './manageAdmin';
 
 function Dashboard() {
     return (
@@ -16,16 +17,21 @@ function Dashboard() {
                 <Sidebar />
                 <main
                     role="main"
-                    className="col-md-9 mr-auto col-lg-10 px-4 mainn"
+                    className="col-md-10 mr-auto col-lg-10 px-4  mainn"
                 >
                     <Switch>
                         <Route exact path="/admin" component={MainAdmin} />
-                        <Route path="/admin/allposts" component={null} />
-                        <Route path="/admin/create-course" component={null} />
-                        <Route path="/admin/allcourses" component={null} />
-                        <Route path="/admin/editpost" component={null} />
-                        <Route path="/admin/editcourse" component={null} />
+                        <Route
+                            path="/admin/manage-admins"
+                            component={ManageAdmins}
+                        />
+                        <Route path="/admin/create-movie" component={null} />
+                        <Route path="/admin/emails" component={null} />
+                        <Route path="/admin/modifie" component={null} />
+                        <Route path="/admin/allmovie" component={null} />
+
                         <Route path="/admin/logout" component={null} />
+                        <Redirect to="notFound" />
                     </Switch>
                 </main>
             </div>

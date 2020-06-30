@@ -16,8 +16,8 @@ ul {
     padding: 0px 10px;
 }
 .mainn {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
+    margin-top: 100px;
+    margin-bottom: 10px;
 }
 
 .sidebar {
@@ -73,4 +73,12 @@ ul {
 .m {
     background-color: whitesmoke;
     min-height: 100vh;
+}
+.manageAdmin {
+    min-height: 50vh;
+}
+
+.adminUser {
+    display: flex;
+    direction: ltr;
 }

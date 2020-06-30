@@ -41,7 +41,7 @@ const NavbarAdmin = () => {
                             </form>
                         </div>
                         <li className="nav-item">
-                            <Link to="#section-top" className="nav-link">
+                            <Link to="/admin/" className="nav-link">
                                 Main Page
                             </Link>
                         </li>
@@ -60,7 +60,7 @@ const NavbarAdmin = () => {
                         </li>{' '}
                         <li className="nav-item">
                             <a
-                                href="/logout"
+                                href="/admin/logout"
                                 className="nav-link logout text-danger lead"
                             >
                                 <i
