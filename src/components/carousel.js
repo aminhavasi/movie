@@ -6,7 +6,7 @@ const Carousel = () => {
             className="carousel slide w-75 mx-auto"
             data-ride="carousel"
         >
-            <ul class="carousel-indicators">
+            <ul className="carousel-indicators">
                 <li
                     data-target="#demo"
                     data-slide-to="0"

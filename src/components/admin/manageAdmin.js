@@ -1,12 +1,12 @@
 import './../../css/admin.css';
 import React from 'react';
 import getAdmins from './../services/fakeAdmins';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { setId } from './../../redux/actions/adminAction';
 const ManageAdmins = (props) => {
     const admins = getAdmins();
     const dispatch = useDispatch();
-    const adminId = useSelector((state) => state.setAdminSelect);
+    // const adminId = useSelector((state) => state.setAdminSelect);
     const handleClick = async (id) => {
         await dispatch(setId(id));
         props.history.push('/admin/person');

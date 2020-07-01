@@ -1,11 +1,11 @@
 import React from 'react';
-import admins from './../services/fakeAdmins';
-import { useSelector } from 'react-redux';
+// import admins from './../services/fakeAdmins';
+// import { useSelector } from 'react-redux';
 import './../../css/personAdmin.css';
 const Person = () => {
-    const adm = admins();
-    const id = localStorage.getItem('userId');
-    const adminId = useSelector((state) => state.setAdminSelect);
+    // const adm = admins();
+    // const id = localStorage.getItem('userId');
+    // const adminId = useSelector((state) => state.setAdminSelect);
     return (
         <div className="person">
             <div className="d-flex px-2 py-2">
@@ -29,16 +29,25 @@ const Person = () => {
                 </div>
                 <div className="bottomAdmin shadow bg-light ">
                     <i
-                        className="fa fa-user  p-3 f"
+                        className="fa fa-close  p-3 f"
                         style={{ fontSize: '20px' }}
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="back!"
                     ></i>
                     <i
                         className="fa fa-cog p-3 "
                         style={{ fontSize: '20px' }}
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="edit"
                     />
                     <i
                         className="fa fa-trash p-3"
                         style={{ fontSize: '20px' }}
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="delete"
                     />
                 </div>
             </div>

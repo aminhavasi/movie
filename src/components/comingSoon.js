@@ -5,13 +5,12 @@ const ComingSoon = () => {
         <React.Fragment>
             <div className="row mt-3 ">
                 <div className="mx-auto d-flex flex flex-column img-fluid col-3 border rounded-sm">
-                    <Link>
-                        <img
-                            alt="img"
-                            className="img mt-1"
-                            src={require('./../resource/img/test.jpg')}
-                        />
-                    </Link>
+                    <img
+                        alt="img"
+                        className="img mt-1"
+                        src={require('./../resource/img/test.jpg')}
+                    />
+
                     <div className="flex d-flex flex-column ComingSoon">
                         <div className="flex d-flex">
                             <div className="felx d-flex px-2 pt-3">
@@ -33,7 +32,7 @@ const ComingSoon = () => {
                             </div>
                         </div>
                         <div className="ml-1 ">
-                            <Link className="link">
+                            <Link to="/admin/test" className="link">
                                 <p className="filmName">The Wretched</p>
                             </Link>
                         </div>
@@ -67,7 +66,7 @@ const ComingSoon = () => {
                         </div>
                         <div className="ml-1 ">
                             {' '}
-                            <Link className="link">
+                            <Link to="/admin/test" className="link">
                                 <p className="filmName">The Wretched</p>
                             </Link>
                         </div>
@@ -101,7 +100,7 @@ const ComingSoon = () => {
                         </div>
                         <div className="ml-1 fil">
                             {' '}
-                            <Link className="link">
+                            <Link to="/admin/test" className="link">
                                 <p className="filmName">The Wretched</p>
                             </Link>
                         </div>

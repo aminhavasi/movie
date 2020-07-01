@@ -9,6 +9,7 @@ import {
 import { Link } from 'react-router-dom';
 import { login } from '../services/httpLogin';
 import { checkLogin } from './../../utils/checkLogin';
+import './../../css/auth.css';
 const Login = (props) => {
     const dispatch = useDispatch();
     const email = useSelector((state) => state.emailLogin);

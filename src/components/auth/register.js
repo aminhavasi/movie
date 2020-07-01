@@ -11,6 +11,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { register } from './../services/httpRegister';
 import { checkRegister } from './../../utils/checkRegister';
 import 'react-toastify/dist/ReactToastify.css';
+import './../../css/auth.css';
 const Register = (props) => {
     const dispatch = useDispatch();
     const email = useSelector((state) => state.emailRegister);

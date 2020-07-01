@@ -10,19 +10,21 @@ class Footer extends Component {
                             <h3>Quick Links</h3>
                             <ul className="list-unstyled">
                                 <li>
-                                    <Link>Home</Link>
+                                    <Link to="/admin/test/">Home</Link>
                                 </li>
                                 <li>
-                                    <Link>Whts's news</Link>
+                                    <Link to="/admin/test/">Whts's news</Link>
                                 </li>{' '}
                                 <li>
-                                    <Link>Support</Link>
+                                    <Link to="/admin/test/">Support</Link>
                                 </li>{' '}
                                 <li>
-                                    <Link>My account</Link>
+                                    <Link to="/admin/test/">My account</Link>
                                 </li>{' '}
                                 <li>
-                                    <Link>Cansel Subscription</Link>
+                                    <Link to="/admin/test/">
+                                        Cansel Subscription
+                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -30,19 +32,19 @@ class Footer extends Component {
                             <h3>informations</h3>
                             <ul className="list-unstyled">
                                 <li>
-                                    <Link>About us</Link>
+                                    <Link to="/admin/test">About us</Link>
                                 </li>
                                 <li>
-                                    <Link>Jobs</Link>
+                                    <Link to="/admin/test">Jobs</Link>
                                 </li>{' '}
                                 <li>
-                                    <Link>Press info</Link>
+                                    <Link to="/admin/test">Press info</Link>
                                 </li>{' '}
                                 <li>
-                                    <Link>Contact</Link>
+                                    <Link to="/admin/test">Contact</Link>
                                 </li>{' '}
                                 <li>
-                                    <Link>Parntship</Link>
+                                    <Link to="/admin/test">Parntship</Link>
                                 </li>
                             </ul>
                         </div>{' '}
@@ -50,29 +52,29 @@ class Footer extends Component {
                             <h3>Follow us</h3>
                             <ul className="list-unstyled">
                                 <li>
-                                    <Link>
+                                    <Link to="/admin/test">
                                         <i className="fa fa-facebook"></i>
                                         Facebook
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link>
+                                    <Link to="/admin/test">
                                         <i className="fa fa-twitter"></i>Twitter
                                     </Link>
                                 </li>{' '}
                                 <li>
-                                    <Link>
+                                    <Link to="/admin/test">
                                         <i className="fa fa-instagram"></i>
                                         Instagram
                                     </Link>
                                 </li>{' '}
                                 <li>
-                                    <Link>
+                                    <Link to="/admin/test">
                                         <i className="fa fa-youtube"></i>Youtube
                                     </Link>
                                 </li>{' '}
                                 <li>
-                                    <Link>
+                                    <Link to="/admin/test">
                                         <i className="fa fa-linkedin">
                                             Linkedin
                                         </i>

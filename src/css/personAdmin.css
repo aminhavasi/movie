@@ -18,3 +18,10 @@
 .f {
     float: left;
 }
+.bottomAdmin i {
+    cursor: pointer;
+}
+.bottomAdmin i:hover {
+    opacity: 0.5;
+    background-color: lightblue;
+}
