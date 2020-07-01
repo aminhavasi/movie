@@ -18,4 +18,3 @@ export const passwordLogin = (state = '', action) => {
             return state;
     }
 };
-//test
