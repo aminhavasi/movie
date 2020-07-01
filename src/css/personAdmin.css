@@ -1,0 +1,20 @@
+.person {
+    min-height: 80vh;
+    display: flex;
+
+    direction: ltr;
+    background-color: lavender;
+    flex-direction: column;
+}
+.bottomAdmin {
+    position: absolute;
+
+    bottom: 60px;
+    left: 25px;
+    right: 25px;
+    text-align: right;
+}
+
+.f {
+    float: left;
+}

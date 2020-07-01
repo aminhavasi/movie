@@ -3,14 +3,13 @@ import React from 'react';
 import getAdmins from './../services/fakeAdmins';
 import { useDispatch, useSelector } from 'react-redux';
 import { setId } from './../../redux/actions/adminAction';
-const ManageAdmins = () => {
+const ManageAdmins = (props) => {
     const admins = getAdmins();
     const dispatch = useDispatch();
     const adminId = useSelector((state) => state.setAdminSelect);
     const handleClick = async (id) => {
         await dispatch(setId(id));
-        await localStorage.setItem('userId', id);
-        window.location = '/admin/person';
+        props.history.push('/admin/person');
     };
     return (
         <div className=" bg-light shadow manageAdmin">
