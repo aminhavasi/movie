@@ -8,6 +8,7 @@ import Sidebar from './sidebar';
 import MainAdmin from './admin';
 import ManageAdmins from './manageAdmin';
 import Person from './person';
+import CreateMovie from './createMovie';
 
 function Dashboard() {
     return (
@@ -26,7 +27,10 @@ function Dashboard() {
                             path="/admin/manage-admins"
                             component={ManageAdmins}
                         />
-                        <Route path="/admin/create-movie" component={null} />
+                        <Route
+                            path="/admin/create-movie"
+                            component={CreateMovie}
+                        />
                         <Route path="/admin/emails" component={null} />
                         <Route path="/admin/person" component={Person} />
 
