@@ -2,8 +2,8 @@ import React from 'react';
 import './../../css/createMovie.css';
 
 const CreateMovie = () => {
-    const handleSave = () => {
-        console.log('handle');
+    const handleSave = (e) => {
+        console.log(e.target.value);
     };
     return (
         <div className="">
@@ -20,8 +20,9 @@ const CreateMovie = () => {
                         <input
                             className="form-control   ml-2 w-25"
                             placeholder="enter a Movie Name ..."
+                            onChange={(e) => handleSave(e)}
                         />
-                        <div className=" ml-3">
+                        <div className=" ml-3" onChange={(e) => handleSave(e)}>
                             <div class="form-check-inline">
                                 <label class="form-check-label" for="radio1">
                                     <input
@@ -62,14 +63,15 @@ const CreateMovie = () => {
                     </div>
                 </div>
                 <div className="card-footer">
-                    <div className="ops">
-                        <p className="">Do You Want To Save This Movie?</p>
-                    </div>
-                    <div>
+                    <div className="ops">Do You Want To Save This Movie?</div>
+                    <div
+                        className="ops1
+                    "
+                    >
                         <button className="btn btn-danger mr-2">cansel</button>
                         <button
-                            onClick={() => handleSave()}
                             className="btn btn-success "
+                            onClick={() => handleSave()}
                         >
                             save
                         </button>
