@@ -6,7 +6,12 @@
     justify-content: right;
 }
 .ops {
-    position: absolute;
+    background-color: white;
     left: 2%;
+    padding: 10px;
     width: 45%;
+}
+.ops1 {
+    position: absolute;
+    right: 2%;
 }
