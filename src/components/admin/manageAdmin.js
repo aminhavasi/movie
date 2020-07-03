@@ -3,6 +3,7 @@ import React from 'react';
 import getAdmins from './../services/fakeAdmins';
 import { useDispatch } from 'react-redux';
 import { setId } from './../../redux/actions/adminAction';
+import './../../css/admin.css';
 const ManageAdmins = (props) => {
     const admins = getAdmins();
     const dispatch = useDispatch();

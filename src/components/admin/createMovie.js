@@ -2,6 +2,9 @@ import React from 'react';
 import './../../css/createMovie.css';
 
 const CreateMovie = () => {
+    const handleSave = () => {
+        console.log('handle');
+    };
     return (
         <div className="">
             <div className="card shadow  ">
@@ -28,7 +31,7 @@ const CreateMovie = () => {
                                         name="optradio"
                                         value="option1"
                                     />
-                                    Option 1 یبل
+                                    Now Play
                                 </label>
                             </div>
                             <div class="form-check-inline">
@@ -40,7 +43,7 @@ const CreateMovie = () => {
                                         name="optradio"
                                         value="option2"
                                     />
-                                    Option 2
+                                    Week Open
                                 </label>
                             </div>
                             <div class="form-check-inline">
@@ -52,13 +55,26 @@ const CreateMovie = () => {
                                         name="optradio"
                                         value="option3"
                                     />
-                                    Option 3
+                                    Coming soon
                                 </label>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="card-footer">salam</div>
+                <div className="card-footer">
+                    <div className="ops">
+                        <p className="">Do You Want To Save This Movie?</p>
+                    </div>
+                    <div>
+                        <button className="btn btn-danger mr-2">cansel</button>
+                        <button
+                            onClick={() => handleSave()}
+                            className="btn btn-success "
+                        >
+                            save
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     );
