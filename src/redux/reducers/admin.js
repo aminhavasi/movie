@@ -18,3 +18,13 @@ export const setTest = (state = '', action) => {
             return state;
     }
 };
+export const createMovie = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_INFO_MOVIE':
+            return [...action.payload];
+        case 'CLEAR_INFO_MOVIE':
+            return action.payload;
+        default:
+            return state;
+    }
+};

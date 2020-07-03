@@ -18,3 +18,20 @@ export const setTest = (value) => {
         await dispatch({ type: 'SET_ADMIN_TEST', payload: value });
     };
 };
+
+export const createMovie = (value) => {
+    return async (dispatch) => {
+        await dispatch({
+            type: 'SET_INFO_MOVIE',
+            payload: value,
+        });
+    };
+};
+export const clearCreateMovie = () => {
+    return async (dispatch) => {
+        await dispatch({
+            type: 'CLEAR_INFO_MOVIE',
+            payload: {},
+        });
+    };
+};

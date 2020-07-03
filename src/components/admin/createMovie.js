@@ -1,7 +1,10 @@
 import React from 'react';
 import './../../css/createMovie.css';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { createMovie } from './../../redux/actions/adminAction';
 const CreateMovie = () => {
+    const dispatch = useDispatch();
+
     const handleSave = (e) => {
         console.log(e.target.value);
     };
@@ -14,15 +17,26 @@ const CreateMovie = () => {
                     <label className="mt-2">plase Select Image : </label>
                     <input className="ml-2 mt-2" type="file" id="file-input" />
                     <br />
-                    <div className="form-inline mt-5">
+                    <div
+                        className="form-inline mt-5"
+                        onChange={(e) =>
+                            dispatch(createMovie({ sectionP: e.target.value }))
+                        }
+                    >
                         {' '}
                         <label>Please Enter a Name for Movie : </label>
                         <input
                             className="form-control   ml-2 w-25"
                             placeholder="enter a Movie Name ..."
-                            onChange={(e) => handleSave(e)}
                         />
-                        <div className=" ml-3" onChange={(e) => handleSave(e)}>
+                        <div
+                            className=" ml-3"
+                            onChange={(e) =>
+                                dispatch(
+                                    createMovie({ sectionPlay: e.target.value })
+                                )
+                            }
+                        >
                             <div class="form-check-inline">
                                 <label class="form-check-label" for="radio1">
                                     <input
